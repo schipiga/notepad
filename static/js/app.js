@@ -1,7 +1,7 @@
-define(['router'], function(Router){
+define(['controller'], function(Controller){
 
   var initialize = function(){
-    Router.initialize();
+    Controller.initialize();
   };
 
   return {

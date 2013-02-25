@@ -1,10 +1,12 @@
 define(['jquery',
         'underscore',
         'backbone',
+        'router',
         'text!templates/note.html',
         'collections/notes'], function($,
                                  _,
                                  BB,
+                                 Router,
                                  NoteTemplate,
                                  NotesCollection){
   
@@ -23,7 +25,8 @@ define(['jquery',
     },
 
     showMessage: function(){
-      this.navigate("show");
+      var router = new Router;
+      router.navigate('show');
     },
 
     compose: function(){
