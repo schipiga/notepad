@@ -3,11 +3,13 @@ define(['jquery',
         'backbone',
         'router',
         'text!templates/note.html',
+        'views/new',
         'collections/notes'], function($,
                                  _,
                                  BB,
                                  Router,
                                  NoteTemplate,
+                                 NewView,
                                  NotesCollection){
   
   var NotesView = BB.View.extend({
@@ -25,8 +27,12 @@ define(['jquery',
     },
 
     showMessage: function(){
+      var new_view = new NewView();
+      new_view.render();
+      /*
       var router = new Router;
       router.navigate('show');
+      */
     },
 
     compose: function(){
